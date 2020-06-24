@@ -7,7 +7,8 @@
                 <div class="card-content">
                     <div class="card-body">
                         <span class="card-title"><?= $time ?></span>
-                        <pre><?= implode($log, "<br>") ?></pre>
+                        <!-- <pre><~?= implode($log, "<br>") ?></pre> -->
+                        <pre style="white-space: pre-wrap;"><?= implode($log, "<br>") ?></pre>
                     </div>
                 </div>
             </div>
