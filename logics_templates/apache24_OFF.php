@@ -19,7 +19,9 @@ if (!is_readable($menu['file'])) {
 // $content_string = file_get_contents($menu['file'],0,null,533378122); //read the file
 // $content_string = file_get_contents($menu['file'],0,null,533378000); //read the file
 // $content = explode("\n", $content_string); //create array separate by new line
-$content = readLastLines($menu['file'],50);
+// $content = readLastLines($menu['file'],50);
+// exec("tail -100 /var/log/apache2/error_log", $content);
+exec('tail -100 ' . $menu['file'], $content);
 
 $log = [];
 $time = '';
